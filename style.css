@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    height: 10rem;
+    width: 10rem;
+}
+
+h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+p {
+    width: 90%;
+}
+
+container {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 40px 1fr 40px;
+    height: 100vh;
+    grid-template-areas: 
+    "E E E E"
+    "C1 C2 C3 C4"
+    "F F F F";
+}
+
+.card-one{
+    grid-area: C1;
+}
+
+.card-two {
+    grid-area: C2;
+}
+
+.card-three {
+    grid-area: C3;
+}
+
+.card-four {
+    grid-area: C4;
+}
+
+div {
+    text-align: center;
+}
