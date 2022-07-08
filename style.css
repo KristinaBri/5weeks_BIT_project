@@ -3,10 +3,30 @@
     padding: 0;
 }
 
+/* span {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+} */
+
 img {
-    height: 10rem;
-    width: 10rem;
+    height: 6rem;
+    width: 6rem;
+    border-radius: 10px;
+    padding: 80px;
 }
+
+/* .clients-icon::after {
+    content:attr(value);
+    font-size:12px;
+    background: red;
+    border-radius:50%;
+    padding:3px;
+    position:relative;
+    left:-8px;
+    top:-10px;
+    opacity:0.9;
+} */
 
 h4 {
     margin-top: 10px;
@@ -21,30 +41,59 @@ container {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 40px 1fr 40px;
+    grid-template-rows: 40px 1fr 40px 1fr 40px;
     height: 100vh;
     grid-template-areas: 
     "E E E E"
     "C1 C2 C3 C4"
-    "F F F F";
+    "H H H H"
+    "P P P P"
+    "E E E E";
 }
 
-.card-one{
+.card-one img{
     grid-area: C1;
+    background-color: rgba(127, 255, 212, 0.5);
 }
 
-.card-two {
+.card-two img {
     grid-area: C2;
+    background-color: rgba(22, 70, 146, 0.5);
 }
 
-.card-three {
+.card-three img {
     grid-area: C3;
+    background-color: rgba(131, 67, 30, 0.5);
 }
 
-.card-four {
+.card-four img {
     grid-area: C4;
+    background-color: rgba(128, 128, 128, 0.5);
+}
+
+h4 {
+    grid-area: H;
+    color: rgb(131, 67, 30);
+}
+
+p {
+    grid-area: P;
+    padding: 0 20px 20px 20px;
+    color: rgb(128, 128, 128);
 }
 
 div {
     text-align: center;
+    align-items: center;
 }
+
+/* @media screen and (max-width: 376px) {
+    container {
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .card-one,
+    .card-two {
+        grid-column: 1;
+    }
+} */
